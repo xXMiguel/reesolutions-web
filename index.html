@@ -3,17 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReeSolutions SRL | Reparación de Electrónicos</title>
+  <title>ReeSolutions SRL | Reparación Especializada</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     .hero { 
-      background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
                   url('https://images.unsplash.com/photo-1581091226825-a6a9b4a6f5c4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover; 
     }
-    .logo-text {
-      font-family: 'Arial Black', sans-serif;
-      letter-spacing: -2px;
+    .card-hover {
+      transition: all 0.4s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.2);
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 0.8s forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
   </style>
 </head>
@@ -21,18 +31,9 @@
 
   <!-- HEADER -->
   <header class="bg-black border-b border-blue-900 sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="flex items-center gap-4">
-        <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <div class="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-3xl shadow-lg shadow-blue-500/50">
-            ⚡
-          </div>
-          <div>
-            <h1 class="logo-text text-3xl font-black tracking-tighter text-white">ReeSolutions</h1>
-            <p class="text-blue-400 text-xs -mt-1">SRL</p>
-          </div>
-        </div>
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="https://tu-dominio.com/logo-reesolutions.png" alt="ReeSolutions SRL" class="h-16 w-auto">
       </div>
 
       <nav class="hidden md:flex gap-8 text-lg">
@@ -43,10 +44,11 @@
       </nav>
 
       <div class="flex items-center gap-4">
-        <a href="https://wa.me/18096054434" target="_blank" 
-           class="bg-green-600 hover:bg-green-500 text-white px-5 py-3 rounded-full flex items-center gap-2 transition">
+        <a href="https://www.instagram.com/reesolutions/" target="_blank" class="hover:text-pink-500 transition">
+          <i class="fa-brands fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://wa.me/18096054434" target="_blank" class="bg-green-600 hover:bg-green-500 px-5 py-3 rounded-full flex items-center gap-2 transition">
           <i class="fa-brands fa-whatsapp text-xl"></i>
-          <span class="hidden sm:inline">WhatsApp</span>
         </a>
       </div>
     </div>
@@ -55,38 +57,39 @@
   <!-- HERO -->
   <section id="inicio" class="hero text-white py-32 text-center">
     <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-5xl md:text-6xl font-black mb-6">Reparamos tu tecnología<br>con precisión y rapidez</h2>
-      <p class="text-xl text-gray-300 mb-10">Especialistas en televisores y equipos de audio de alta gama</p>
-      <div class="flex flex-col sm:flex-row gap-5 justify-center">
-        <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white text-xl px-10 py-5 rounded-2xl font-semibold transition">
-          Solicitar Reparación
-        </a>
-        <a href="https://wa.me/18096054434" target="_blank" class="border border-white/70 hover:bg-white/10 text-white text-xl px-10 py-5 rounded-2xl font-semibold transition">
-          Hablar por WhatsApp
-        </a>
-      </div>
+      <h2 class="text-5xl md:text-6xl font-black mb-6 fade-in">Reparación especializada<br>de equipos electrónicos</h2>
+      <p class="text-xl text-gray-300 mb-10">Televisores • Equipos de Sonido • Subwoofers</p>
+      <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white text-xl px-10 py-5 rounded-2xl font-semibold transition">
+        Solicitar Reparación
+      </a>
     </div>
   </section>
 
   <!-- SERVICIOS -->
   <section id="servicios" class="py-20 bg-gray-900">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-4">Nuestros Servicios</h2>
-      <p class="text-center text-gray-400 mb-12">Reparación profesional de electrónicos</p>
+      <h2 class="text-4xl font-bold text-center mb-12">Nuestros Servicios</h2>
 
-      <div class="grid md:grid-cols-2 gap-10">
-        <div class="bg-gray-800 p-10 rounded-3xl border border-blue-900/50 hover:border-blue-600 transition">
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- TV -->
+        <div class="bg-gray-800 p-8 rounded-3xl card-hover">
           <i class="fa-solid fa-tv text-6xl text-blue-500 mb-6"></i>
           <h3 class="text-3xl font-semibold mb-3">Reparación de Televisores</h3>
-          <p class="text-gray-300">Todas las pulgadas y marcas: Samsung, LG, TCL, Sony, Hisense y más.<br>
-          Problemas de imagen, backlight, mainboard, sonido, WiFi, etc.</p>
+          <p class="text-gray-300">Samsung, LG, TCL, Sony, Hisense y más.</p>
         </div>
 
-        <div class="bg-gray-800 p-10 rounded-3xl border border-blue-900/50 hover:border-blue-600 transition">
+        <!-- Audio -->
+        <div class="bg-gray-800 p-8 rounded-3xl card-hover">
           <i class="fa-solid fa-volume-high text-6xl text-blue-500 mb-6"></i>
-          <h3 class="text-3xl font-semibold mb-3">Equipos de Sonido y Audio</h3>
-          <p class="text-gray-300">Receptores AV, Amplificadores y Home Theater:<br>
-          Marantz • Denon • Yamaha • Onkyo • Episode • NAD y más.</p>
+          <h3 class="text-3xl font-semibold mb-3">Equipos de Sonido</h3>
+          <p class="text-gray-300">Marantz, Denon, Yamaha, Onkyo, NAD, Episode, etc.</p>
+        </div>
+
+        <!-- Subwoofers -->
+        <div class="bg-gray-800 p-8 rounded-3xl card-hover">
+          <i class="fa-solid fa-bass-guitar text-6xl text-blue-500 mb-6"></i>
+          <h3 class="text-3xl font-semibold mb-3">Subwoofers</h3>
+          <p class="text-gray-300">Reparación y mantenimiento de subwoofers de alta potencia.</p>
         </div>
       </div>
     </div>
@@ -96,17 +99,28 @@
   <section id="marcas" class="py-20 bg-black">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-12">Marcas que Reparamos</h2>
-      <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 text-2xl font-medium opacity-75">
-        <div>Samsung</div>
-        <div>LG</div>
-        <div>TCL</div>
-        <div>Sony</div>
-        <div>Marantz</div>
-        <div>Denon</div>
-        <div>Yamaha</div>
-        <div>Onkyo</div>
-        <div>Episode</div>
-        <div>NAD</div>
+      
+      <div class="mb-16">
+        <h3 class="text-2xl font-semibold mb-6 text-blue-400">Subwoofers</h3>
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-6 text-lg opacity-80">
+          <div>Velodyne</div>
+          <div>SVS</div>
+          <div>Paradigm</div>
+          <div>Polk Audio</div>
+          <div>KEF</div>
+          <div>JL Audio</div>
+          <div>Rockford Fosgate</div>
+          <div>Pioneer</div>
+          <div>Alpine</div>
+          <div>DD Audio</div>
+        </div>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-6 text-blue-400">Televisores y Audio</h3>
+      <div class="grid grid-cols-3 md:grid-cols-6 gap-8 text-xl font-medium opacity-75">
+        <div>Samsung</div><div>LG</div><div>TCL</div><div>Sony</div>
+        <div>Marantz</div><div>Denon</div><div>Yamaha</div><div>Onkyo</div>
+        <div>NAD</div><div>Episode</div>
       </div>
     </div>
   </section>
@@ -116,47 +130,40 @@
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Contáctanos</h2>
       <div class="grid md:grid-cols-2 gap-12">
+        <!-- Información -->
         <div class="space-y-8">
           <div>
-            <h3 class="text-blue-400 text-lg mb-2">📍 Dirección</h3>
-            <p class="text-xl">Av. Isabel Aguiar #38<br>
-            Plaza BHD Local #10<br>
-            <span class="text-gray-400">Zona Industrial de Herrera, Santo Domingo</span></p>
+            <img src="https://tu-dominio.com/logo-reesolutions.png" alt="ReeSolutions" class="h-20 mb-6">
+            <p class="text-2xl">ReeSolutions SRL</p>
           </div>
-
           <div>
-            <h3 class="text-blue-400 text-lg mb-2">📞 Teléfonos</h3>
-            <p class="text-xl space-y-3">
-              <a href="tel:8094737567" class="block hover:text-blue-400">• 809-473-7567</a>
-              <a href="tel:8096054434" class="block hover:text-blue-400">• 809-605-4434</a>
-            </p>
-            <p class="text-green-400 mt-2 text-sm">✅ Ambos números tienen WhatsApp</p>
+            <p class="text-gray-400">📍 Av. Isabel Aguiar #38, Plaza BHD Local #10<br>Zona Industrial de Herrera, Santo Domingo</p>
           </div>
+          <div>
+            <p class="text-xl">📞 809-473-7567</p>
+            <p class="text-xl">📞 809-605-4434</p>
+            <p class="text-green-400 text-sm mt-1">• Ambos con WhatsApp</p>
+          </div>
+          <a href="https://www.instagram.com/reesolutions/" target="_blank" class="flex items-center gap-3 text-pink-400 hover:text-pink-500">
+            <i class="fa-brands fa-instagram text-3xl"></i>
+            <span>@reesolutions</span>
+          </a>
         </div>
 
-        <div>
-          <form class="space-y-6 bg-gray-800 p-8 rounded-3xl">
-            <input type="text" placeholder="Nombre completo" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl focus:border-blue-600 outline-none">
-            <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl focus:border-blue-600 outline-none">
-            <textarea placeholder="Describe el problema de tu equipo (marca, modelo, falla...)" rows="5" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl focus:border-blue-600 outline-none"></textarea>
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-5 rounded-2xl text-xl font-semibold transition">
-              Enviar mensaje
-            </button>
-          </form>
-        </div>
+        <!-- Formulario -->
+        <form class="space-y-6 bg-gray-800 p-8 rounded-3xl">
+          <input type="text" placeholder="Nombre" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl">
+          <input type="tel" placeholder="Teléfono / WhatsApp" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl">
+          <textarea placeholder="Describe la falla de tu equipo (marca, modelo, síntoma)" rows="5" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl"></textarea>
+          <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 py-5 rounded-2xl text-xl font-semibold transition">Enviar Solicitud</button>
+        </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-black py-12 border-t border-gray-800">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <div class="flex items-center justify-center gap-3 mb-6">
-        <div class="w-10 h-10 bg-blue-600 rounded-2xl flex items-center justify-center text-2xl">⚡</div>
-        <h2 class="text-3xl font-black tracking-tighter">ReeSolutions SRL</h2>
-      </div>
-      <p class="text-gray-500">© 2026 ReeSolutions SRL - Especialistas en reparación de televisores y audio</p>
-    </div>
+  <footer class="bg-black py-12 border-t border-gray-800 text-center">
+    <p class="text-gray-500">© 2026 ReeSolutions SRL - Servicio Técnico Especializado</p>
   </footer>
 
 </body>
