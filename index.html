@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     .hero { 
-      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
-                  url('https://images.unsplash.com/photo-1581091226825-a6a9b4a6f5c4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover; 
-    }
+  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+              url('https://images.unsplash.com/photo-1581091226825-a6a9b4a6f5c4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80') center/cover; 
+}
     .card-hover {
       transition: all 0.4s ease;
     }
@@ -54,15 +54,23 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="inicio" class="hero text-white py-32 text-center">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-5xl md:text-6xl font-black mb-6 fade-in">Reparación especializada<br>de equipos electrónicos</h2>
-      <p class="text-xl text-gray-300 mb-10">Televisores • Equipos de Sonido • Subwoofers</p>
-      <a href="#contacto" class="bg-blue-600 hover:bg-blue-700 text-white text-xl px-10 py-5 rounded-2xl font-semibold transition">
-        Solicitar Reparación
+    <!-- HERO - Sección Principal con fondo -->
+  <section id="inicio" class="hero text-white py-32 md:py-44 text-center relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+      <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">
+        Reparación especializada<br>en equipos electrónicos
+      </h2>
+      <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-2xl mx-auto">
+        Televisores • Equipos de Sonido • Subwoofers • Audio Premium
+      </p>
+      <a href="#contacto" 
+         class="inline-block bg-blue-600 hover:bg-blue-700 text-white text-xl px-12 py-5 rounded-2xl font-semibold transition transform hover:scale-105">
+        Solicitar Reparación Ahora
       </a>
     </div>
+
+    <!-- Overlay para mejor legibilidad -->
+    <div class="absolute inset-0 bg-black/75"></div>
   </section>
 
   <!-- SERVICIOS -->
