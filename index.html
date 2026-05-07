@@ -162,30 +162,41 @@
     </div>
   </section>
 
-  <!-- CONTACTO -->
+    <!-- CONTACTO -->
   <section id="contacto" class="py-20 bg-gray-900">
     <div class="max-w-7xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Contáctanos</h2>
       <div class="grid md:grid-cols-2 gap-12">
+        
         <!-- Información -->
         <div class="space-y-8">
           <div>
-            <img src="Logo2.0.png" alt="ReeSolutions" class="h-20 mb-6">
+            <img src="logo-reesolutions.png" alt="ReeSolutions" class="h-20 mb-6">
             <p class="text-2xl">ReeSolutions SRL</p>
           </div>
-          <div>
-            <p class="text-gray-400">📍 Av. Isabel Aguiar #38, Plaza BHD Local #10<br>Zona Industrial de Herrera, Santo Domingo</p>
+          <div class="space-y-4 text-lg">
+            <p>📍 Av. Isabel Aguiar #38, Plaza BHD Local #10<br>Zona Industrial de Herrera, Santo Domingo</p>
+            <p>📞 809-473-7567</p>
+            <p>📞 809-605-4434</p>
+            <p class="text-green-400">✅ Ambos números tienen WhatsApp</p>
           </div>
-          <div>
-            <p class="text-xl">📞 809-473-7567</p>
-            <p class="text-xl">📞 809-605-4434</p>
-            <p class="text-green-400 text-sm mt-1">• Ambos con WhatsApp</p>
-          </div>
-          <a href="https://www.instagram.com/reesolutions/" target="_blank" class="flex items-center gap-3 text-pink-400 hover:text-pink-500">
-            <i class="fa-brands fa-instagram text-3xl"></i>
-            <span>@reesolutions</span>
-          </a>
         </div>
+
+        <!-- Formulario WhatsApp -->
+        <form id="contactForm" class="space-y-6 bg-gray-800 p-8 rounded-3xl">
+          <input type="text" id="nombre" placeholder="Nombre completo" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl" required>
+          <input type="tel" id="telefono" placeholder="Número de WhatsApp" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl" required>
+          <textarea id="mensaje" placeholder="Describe el problema de tu equipo (marca, modelo, falla...)" rows="5" class="w-full p-4 bg-gray-900 border border-gray-700 rounded-2xl" required></textarea>
+          
+          <button type="submit" 
+                  class="w-full bg-green-600 hover:bg-green-500 py-5 rounded-2xl text-xl font-semibold transition flex items-center justify-center gap-3">
+            <i class="fa-brands fa-whatsapp text-2xl"></i>
+            Enviar por WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
         <!-- Formulario -->
         <form class="space-y-6 bg-gray-800 p-8 rounded-3xl">
